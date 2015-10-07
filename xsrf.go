@@ -29,7 +29,7 @@ import (
 
 // The duration that XSRF tokens are valid.
 // It is exported so clients may set cookie timeouts that match generated tokens.
-const Timeout = 24 * time.Hour
+var Timeout = 24 * time.Hour
 
 // clean sanitizes a string for inclusion in a token by replacing all ":"s.
 func clean(s string) string {
